@@ -1,7 +1,8 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:local_storage/shared_preferences.dart';
+import 'package:local_storage/hive/hive.dart';
+import 'package:local_storage/shared_preferences/shared_preferences.dart';
 import 'package:local_storage/shared_preferences/models.dart';
 import 'package:local_storage/shared_preferences/preferences_service.dart';
 
@@ -19,7 +20,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SharedPreferences(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.yellow
+      ),
+      home: HiveLocal(),
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'shared_preferences/models.dart';
-import 'shared_preferences/preferences_service.dart';
+import 'models.dart';
+import 'preferences_service.dart';
 
 class SharedPreferences extends StatefulWidget {
   const SharedPreferences({super.key});
